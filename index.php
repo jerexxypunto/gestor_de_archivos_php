@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gestor de base de datos</h1>
+        <h1>Gestor de datos</h1>
         <main>
             <?php
                 // Guardo el resultado de la consulta en una variable
