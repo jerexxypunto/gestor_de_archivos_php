@@ -5,4 +5,21 @@
 .caja-de-directorio a {
     border: 1px solid #b6b6b6;
     margin-bottom: 5px;
+    color: #040404;
+    padding:0 0 0 10px;
+}
+
+.caja-de-directorio a:hover{
+    color:tomato
+}
+
+.caja-de-directorio .folder{
+    color:#9c0;
+}
+
+.caja-de-directorio .folder span{
+    color: orange;
+}
+.caja-de-directorio .file span{
+    color: skyblue;
 }

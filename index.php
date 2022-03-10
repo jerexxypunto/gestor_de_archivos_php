@@ -9,7 +9,9 @@
     <!-- Links de estilos css -->
     <link rel="stylesheet" href="./css/gsc-bootsrap.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
     
+
     <!-- Configuraciones del gestor -->
     <?php require_once 'settings-gestor.php' ?>
 
@@ -25,9 +27,11 @@
                 foreach ($directorio_array as $key => $value) {
                     
                     if(is_dir($value)){
-                        echo "<a class='d-block'>$value</a>";
+                        if($value !== ".." && $value !== "."){
+                            echo "<a class='d-block folder'><span class='fas fa-folder'></span> $value</a>";
+                        }
                     }else{
-                        echo "<a class='d-block'>$value</a>";
+                        echo "<a class='d-block file'><span class='fas fa-file'></span> $value</a>";
                     }
                 }
                 echo "</div>";
