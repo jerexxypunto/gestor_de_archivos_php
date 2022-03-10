@@ -1,0 +1,8 @@
+.caja-de-directorio{
+    border: 1px solid #040404;
+}
+
+.caja-de-directorio a {
+    border: 1px solid #b6b6b6;
+    margin-bottom: 5px;
+}
