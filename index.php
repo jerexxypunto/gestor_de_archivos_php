@@ -28,15 +28,33 @@
                     
                     if(is_dir($value)){
                         if($value !== ".." && $value !== "."){
-                            echo "<a class='d-block folder'><span class='fas fa-folder'></span> $value</a>";
+                            echo "<a href='?data-link=$value' class='d-block folder'><span class='fas fa-folder'></span> $value</a>";
                         }
                     }else{
-                        echo "<a class='d-block file'><span class='fas fa-file'></span> $value</a>";
+                        echo "<a href='?data-link=$value' class='d-block file'><span class='fas fa-file'></span> $value</a>";
                     }
                 }
                 echo "</div>";
             ?>
         </main>
+        <aside>
+            <?php 
+                if(isset($_GET['data-link'])){
+                    $dato = $_GET['data-link'];
+                    ?>
+                        <iframe id="box-iframe" src="./" class="border border-secondary mt-2" width="100%" height="400"></iframe>
+                        <script>
+                            const boxIframe = document.querySelector("#box-iframe");
+                            const host = window.location.host; // obtengo el dominio
+                            const path = (window.location.pathname).split('/'); // obtengo la ruta
+
+                            const ruta = `http://${host}/${path[1]}/<?php echo $dato;?>`; // ruta construida con variable php $dato
+                        </script>
+                    <?php
+                }
+            ?>
+        </aside>
     </div>
 </body>
+<script src="js/app.js"></script>
 </html>
