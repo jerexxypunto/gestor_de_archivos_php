@@ -1,2 +1,2 @@
 # Intrucciones
-Este gestor funciona con la dependencia de fontawesome
+Este gestor funciona con la dependencia de fontawesome.
