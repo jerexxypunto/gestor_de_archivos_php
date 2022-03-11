@@ -49,6 +49,8 @@
                             const path = (window.location.pathname).split('/'); // obtengo la ruta
 
                             const ruta = `http://${host}/${path[1]}/<?php echo $dato;?>`; // ruta construida con variable php $dato
+
+                            boxIframe.setAttribute("src",ruta);
                         </script>
                     <?php
                 }
