@@ -48,17 +48,9 @@
                             const host = window.location.host; // obtengo el dominio
                             const path = (window.location.pathname).split('/'); // obtengo la ruta
 
-                            const links = document.querySelectorAll(".file");
-
                             const ruta = `http://${host}/${path[1]}/<?php echo $dato;?>`; // ruta construida con variable php $dato
 
                             boxIframe.setAttribute("src",ruta);
-                            for (let i = 0; i < links.length; i++) {
-                                const element = links[i];
-                                if(element.textContent.includes('.php')){ // verfico si el enlace lleva a un archivo.php
-                                    element.classList.replace("d-block","d-none"); // reemplazo la classe d-block por la classe d-none
-                                }
-                            }
                         </script>
                     <?php
                 }
@@ -66,5 +58,5 @@
         </aside>
     </div>
 </body>
-<script src="js/app.js"></script>
+<script src="./js/app.js"></script>
 </html>
